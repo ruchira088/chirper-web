@@ -13,29 +13,32 @@ const webpackConfiguration = {
         host: "0.0.0.0",
         historyApiFallback: true
     },
-    devtool: "source-maps",
+    devtool: "source-map",
     module: {
         rules: [
             {
-                test: /\.(js|jsx$)/,
+                test: /\.[tj]sx?$/,
                 exclude: /node_modules/,
-                use: ["babel-loader"]
+                use: [ "awesome-typescript-loader" ]
+            },
+            {
+                test: /\.js$/,
+                enforce: "pre",
+                use: [ "source-map-loader" ]
             },
             {
                 test: /\.(scss|css)$/,
-                loaders: ["style-loader", "css-loader", "sass-loader"]
+                loaders: [ "style-loader", "css-loader", "sass-loader" ]
             },
             {
                 test: /\.(png)$/,
-                loader: ["file-loader?name=assets/[name].[ext]"]
+                loader: [ "file-loader?name=assets/[name].[ext]" ]
             }
         ]
     },
     resolve: {
-        extensions: ["*", ".js", ".jsx"],
-        alias: {
-
-        }
+        extensions: [ "*", ".js", ".jsx", ".ts", ".tsx" ],
+        alias: {}
     }
 }
 
