@@ -4,7 +4,7 @@
   "description": "Front-end web application for Chirper",
   "main": "index.js",
   "repository": "git@github.com:ruchira088/chirper-web.git",
-  "author": "Ruchira (Richie) Jayasekara <ruchira088@gmail.com>",
+  "author": "Ruchira (Richie) Jayasekara <me@ruchij.com>",
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server"
