@@ -1,19 +1,12 @@
 const path = require("path")
 
 const webpackConfiguration = {
-    entry: "./app/Index.jsx",
+    entry: path.resolve(__dirname, "../app/Index.jsx"),
     output: {
-        path: path.resolve(__dirname, "public", "dist"),
+        path: path.resolve(__dirname, "../public", "dist"),
         filename: "bundle.js",
         publicPath: "/dist/"
     },
-    devServer: {
-        contentBase: path.resolve(__dirname, "public"),
-        port: 8000,
-        host: "0.0.0.0",
-        historyApiFallback: true
-    },
-    devtool: "source-map",
     module: {
         rules: [
             {
