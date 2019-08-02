@@ -3,6 +3,7 @@
     "sourceMap": true,
     "strictNullChecks": true,
     "module": "es6",
+    "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "target": "es5",
     "allowJs": true,

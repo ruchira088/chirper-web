@@ -1,7 +1,7 @@
 const path = require("path")
 
 const webpackConfiguration = {
-    entry: path.resolve(__dirname, "../app/Index.jsx"),
+    entry: path.resolve(__dirname, "../app/Index.tsx"),
     output: {
         path: path.resolve(__dirname, "../public", "dist"),
         filename: "bundle.js",
